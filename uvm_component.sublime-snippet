@@ -1,0 +1,225 @@
+<snippet>
+    <name>UVM component</name>
+    <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends ${2:uvm_component };
+
+//-------------------------------------------------------------------------------
+// Interface, port, fields
+//-------------------------------------------------------------------------------
+
+  /**** Discribe them in this feald ****/
+
+//-------------------------------------------------------------------------------
+// Factory register
+//-------------------------------------------------------------------------------
+
+  `uvm_component_utils(${1})
+  //`uvm_component_utils_begin(${1})
+    /**** `uvm_field_* macro invocations here ****/
+  //`uvm_component_utils_end
+
+//-------------------------------------------------------------------------------
+// Functions and Tasks
+//-------------------------------------------------------------------------------
+
+  // Constructor
+  function new(string name = "${1}", uvm_component parent=null);
+    super.new(name, parent);
+  endfunction
+
+  //-----------------------------------------------------------------------------
+  // User Methods
+  //-----------------------------------------------------------------------------
+
+  /**** Discribe them in this feald ****/
+
+  //-----------------------------------------------------------------------------
+  // Build Phases
+  //-----------------------------------------------------------------------------
+
+  // build
+  virtual function void build_phase(uvm_phase phase);
+    // super.build_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+  // connect
+  virtual function void connect_phase(uvm_phase phase);
+    // super.connect_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+  // end_of_elaboration
+  virtual function void end_of_elaboration_phase(uvm_phase phase);
+    // super.end_of_elaboration_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+  //-----------------------------------------------------------------------------
+  // Run Phases
+  //-----------------------------------------------------------------------------
+
+  // connect
+  virtual function void start_of_simulation_phase(uvm_phase phase);
+    // super.start_of_simulation_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+  // run
+  // virtual task run_phase(uvm_phase phase);
+    // super.run_phase(phase);
+    // phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    // phase.drop_objection(this);
+  // endtask
+
+  // pre_reset
+  virtual task pre_reset(uvm_phase phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // reset
+  virtual task reset(uvm_phase phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // post_reset
+  virtual task post_reset(uvm_phase phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // pre_configure
+  virtual task pre_configure_phase(uvm_phase phase);
+    // super.pre_configure_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // configure
+  virtual task configure_phase(uvm_phase phase);
+    // super.configure_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // post_configure
+  virtual task post_configure_phase(uvm_phase phase);
+    // super.post_configure_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // pre_main
+  virtual task pre_main_phase(uvm_phase phase);
+    // super.pre_main_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // main
+  virtual task main_phase(uvm_phase phase);
+    // super.main_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // post_main
+  virtual task post_main_phase(uvm_phase phase);
+    // super.post_main_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // pre_shutdown
+  virtual task pre_shutdown_phase(uvm_phase phase);
+    // super.pre_shutdown_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // shutdown
+  virtual task shutdown_phase(uvm_phase phase);
+    // super.shutdown_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  // post_shutdown
+  virtual task post_shutdown_phase(uvm_phase phase);
+    // super.post_shutdown_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+  //-----------------------------------------------------------------------------
+  // Cleanup Phases
+  //-----------------------------------------------------------------------------
+
+  // extract
+  virtual function void extract_phase(uvm_phase phase);
+    // super.extract_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+  // check
+  virtual function void check_phase(uvm_phase phase);
+    // super.check_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+  // report
+  virtual function void report_phase(uvm_phase phase);
+    // super.report_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+  // final
+  virtual function void final_phase(uvm_phase phase);
+    // super.final_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+endclass]]></content>
+  <tabTrigger>uvm_component</tabTrigger>
+  <scope>source.systemverilog</scope>
+</snippet>

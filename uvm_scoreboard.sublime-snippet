@@ -1,0 +1,57 @@
+<snippet>
+    <name>UVM scoreboard</name>
+    <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends uvm_scoreboard;
+
+//-------------------------------------------------------------------------------
+// Interface, port, fields
+//-------------------------------------------------------------------------------
+
+  /**** Discribe them in this feald ****/
+  // uvm_tlm_analysis_fifo #(${2:uvm_sequence_item})  input.. ;
+  // uvm_tlm_analysis_fifo #(${2:uvm_sequence_item}) output.. ;
+
+  // ${2:uvm_sequence_item}  input.. ;
+  // ${2:uvm_sequence_item} output.. ;
+
+//-------------------------------------------------------------------------------
+// Factory register
+//-------------------------------------------------------------------------------
+
+  `uvm_component_utils(${1})
+  //`uvm_component_utils_begin(${1})
+    /**** `uvm_field_* macro invocations here ****/
+  //`uvm_component_utils_end
+
+//-------------------------------------------------------------------------------
+// Functions and Tasks
+//-------------------------------------------------------------------------------
+
+  // Constructor
+  function new(string name = "${1}", uvm_component parent=null);
+    super.new(name, parent);
+  endfunction
+
+  //-----------------------------------------------------------------------------
+  // User Methods
+  //-----------------------------------------------------------------------------
+
+  /**** Discribe them in this feald ****/
+
+  //-----------------------------------------------------------------------------
+  // Run Phases
+  //-----------------------------------------------------------------------------
+
+  // run
+  virtual task run_phase(uvm_phase phase);
+    // super.run_phase(phase);
+    phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+endclass]]></content>
+  <tabTrigger>uvm_scoreboard</tabTrigger>
+  <scope>source.systemverilog</scope>
+</snippet>

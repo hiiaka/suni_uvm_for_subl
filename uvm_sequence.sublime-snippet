@@ -1,0 +1,33 @@
+<snippet>
+    <name>UVM seuence_item</name>
+    <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends #(${2:uvm_sequence_item}, ${3:REQ}) uvm_sequence ;
+
+//-------------------------------------------------------------------------------
+// Factory register
+//-------------------------------------------------------------------------------
+
+  `uvm_object_utils(${1})
+  //`uvm_object_utils_begin(${1})
+    /**** `uvm_field_* macro invocations here ****/
+  //`uvm_object_utils_end
+
+//-------------------------------------------------------------------------------
+// Functions and Tasks
+//-------------------------------------------------------------------------------
+
+  // Constructor
+  function new(string name = "${1}");
+    super.new(name);
+  endfunction
+
+  //-----------------------------------------------------------------------------
+  // User Methods
+  //-----------------------------------------------------------------------------
+
+  /**** Discribe them in this feald ****/
+  // virtual task body();...
+
+endclass]]></content>
+  <tabTrigger>uvm_sequence</tabTrigger>
+  <scope>source.systemverilog</scope>
+</snippet>

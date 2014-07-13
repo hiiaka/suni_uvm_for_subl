@@ -1,0 +1,69 @@
+<snippet>
+    <name>UVM test</name>
+    <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends uvm_test ;
+
+//-------------------------------------------------------------------------------
+// Interface, port, fields
+//-------------------------------------------------------------------------------
+
+  /**** Discribe them in this feald ****/
+  // env .. ;
+
+//-------------------------------------------------------------------------------
+// Factory register
+//-------------------------------------------------------------------------------
+
+  `uvm_component_utils(${1})
+  //`uvm_component_utils_begin(${1})
+    /**** `uvm_field_* macro invocations here ****/
+  //`uvm_component_utils_end
+
+//-------------------------------------------------------------------------------
+// Functions and Tasks
+//-------------------------------------------------------------------------------
+
+  // Constructor
+  function new(string name = "${1}", uvm_component parent=null);
+    super.new(name, parent);
+  endfunction
+
+  //-----------------------------------------------------------------------------
+  // User Methods
+  //-----------------------------------------------------------------------------
+
+  /**** Discribe them in this feald ****/
+
+  //-----------------------------------------------------------------------------
+  // Build Phases
+  //-----------------------------------------------------------------------------
+
+  // build
+  virtual function void build_phase(uvm_phase phase);
+    // super.build_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+  // end_of_elaboration
+  virtual function void end_of_elaboration_phase(uvm_phase phase);
+    // super.end_of_elaboration_phase(phase);
+    /**** Write body of this function ****/
+  endfunction
+
+  //-----------------------------------------------------------------------------
+  // Run Phases
+  //-----------------------------------------------------------------------------
+
+  // run
+  virtual task run_phase(uvm_phase phase);
+     // super.run_phase(phase);
+     phase.raise_objection(this);
+
+    /**** Write body of this task ****/
+
+    phase.drop_objection(this);
+  endtask
+
+endclass]]></content>
+  <tabTrigger>uvm_test</tabTrigger>
+  <scope>source.systemverilog</scope>
+</snippet>

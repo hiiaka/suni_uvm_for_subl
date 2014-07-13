@@ -1,0 +1,33 @@
+<snippet>
+    <name>UVM seuence_item</name>
+    <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}} extends uvm_sequence_item ;
+
+//-------------------------------------------------------------------------------
+// Items
+//-------------------------------------------------------------------------------
+
+  /**** Discribe them in this feald ****/
+  // rand logic [3:0] .. ;
+
+//-------------------------------------------------------------------------------
+// Factory register
+//-------------------------------------------------------------------------------
+
+  `uvm_object_utils(${1})
+  //`uvm_object_utils_begin(${1})
+    /**** `uvm_field_* macro invocations here ****/
+  //`uvm_object_utils_end
+
+//-------------------------------------------------------------------------------
+// Functions and Tasks
+//-------------------------------------------------------------------------------
+
+  // Constructor
+  function new(string name = "${1}");
+    super.new(name);
+  endfunction
+
+endclass]]></content>
+  <tabTrigger>uvm_sequence_item</tabTrigger>
+  <scope>source.systemverilog</scope>
+</snippet>
