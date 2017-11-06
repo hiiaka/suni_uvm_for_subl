@@ -2,9 +2,5 @@
 	<content><![CDATA[
 `uvm_info(${1:get_type_name()}, "${2:Message string}", ${3:UVM_DEFAULT})
 ]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<!-- <tabTrigger>hello</tabTrigger> -->
 	<tabTrigger>uvm_info</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-
 </snippet>
