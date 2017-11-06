@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-`uvm_info(${1:get_type_name()}, "${2:Message string}", ${3:UVM_DEFAULT})
+`uvm_info(${1:get_type_name()}, "${2:Message string}", ${3:UVM_LOW})
 ]]></content>
 	<tabTrigger>uvm_info</tabTrigger>
 </snippet>
