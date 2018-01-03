@@ -1,4 +1,6 @@
-suni_uvm_for_subl
+SV Snippets for Sublime Text
 =================
 SystemVerilog UVM snippets for Sublime Text.
-These were confirmed on Sublime Text 3.
+
+## Installation in Linux
+Copy on ~/.config/sublime-text-3/Packages/User/
